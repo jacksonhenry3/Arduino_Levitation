@@ -2,7 +2,7 @@
 
 Example sketch 10
 
-SPINNING A MOTOR
+SPINNING A MOTOR (test change)
 
   Use a transistor to spin a motor at different speeds.
   We'll also show you how to input data from the serial port
