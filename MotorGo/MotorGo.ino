@@ -8,18 +8,11 @@ SPINNING A MOTOR (test change)
   We'll also show you how to input data from the serial port
   (see the serialSpeed() function below).
 
-  Motors are the basis for thousands of things in our daily lives,
-  and the Arduino can control them. Here we'll use pulse-width
-  modulation (PWM) to vary the speed of a motor.
-
-  The Arduino pins are strong enough to light small LEDs (up to
-  40 milliAmps), but they're not strong enough to run motors and
-  other power-hungry parts. (This motor needs 50-100mA).
-  Because the motor needs more current than an Arduino pin can
-  provide, we'll use a transistor to do the heavy lifting.
-  A transistor is a solid-state switch. When we give it a small
-  amount of current, it can switch a much larger current.
-  The transistors in your kit (2N2222) can switch up to 200mA.
+  Using PWM
+  
+  The arduino pins are not powerful enough to run the motor, so we
+  use a transistor. The transistors in your kit (2N2222) can switch 
+  up to 200mA.
 
   You can turn a transistor on and off using the digitalWrite()
   function, but you can also use the analogWrite() function to
@@ -27,11 +20,8 @@ SPINNING A MOTOR (test change)
   a pin, varying the width of the pulse from 0% to 100%. We call
   this technique "PWM", for "Pulse-Width Modulation".
 
-  One thing to keep in mind is that when you lower the speed of
-  a motor using PWM, you're also reducing the torque (strength)
-  of the motor. For PWM values below 50 or so, the motor won't have
-  enough torque to start spinning. It will start spinning when you
-  raise the speed a bit.
+  For PWM values below 50% or so, the motor won't have
+  enough torque to start spinning.
 
 Hardware connections:
 
@@ -95,10 +85,7 @@ void setup()
 
 void loop()
 {
-  // Here we've used comments to disable some of the examples.
-  // To try different things, uncomment one of the following lines
-  // and comment the other ones. See the functions below to learn
-  // what they do and how they work.
+  // Uncomment the code to try different examples
 
   // motorOnThenOff();
   // motorOnThenOffWithSpeed();
